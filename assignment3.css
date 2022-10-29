@@ -1,0 +1,258 @@
+:root {
+    --error-color: #dc3545;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+}
+
+body {
+    background-color: white;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+table {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 80px;
+}
+
+td {
+    border: #000 solid 1px;
+    padding: 10px;
+}
+
+tr td:first-child {
+    border-bottom: none;
+    border-top: none;
+}
+
+tr:first-child td:first-child {
+    border-top: #000 solid 1px;
+}
+
+tr:last-child td:first-child {
+    border-bottom: #000 solid 1px;
+}
+
+#jaar {
+    float: right;
+}
+
+#red {
+    width: 20%;
+}
+
+h5 {
+    color: blue;
+}
+
+@media (min-width: 1200px) {
+    body {
+        background-color: white;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    body {
+        background-color: white;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+        background-color: white;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        background-color: white;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
+    }
+}
+
+@media (max-width: 479px) {
+    body {
+        background-color: white;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
+    }
+}
+
+.main {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+
+/* Hide the default checkbox */
+.main input {
+    visibility: hidden;
+}
+
+/* Creating a custom checkbox
+        based on demand */
+.geekmark {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 13px;
+    width: 13px;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+
+/* Specify the background color to be
+        shown when checkbox is checked */
+.main input:checked~.geekmark {
+    background-color: red;
+    border: none;
+}
+
+/* Specify the background color to be
+        shown when checkbox is disabled */
+.main input:disabled~.geekmark {
+    opacity: 50%;
+}
+
+/* Checkmark to be shown in checkbox */
+/* It is not be shown when not checked */
+.geekmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Display checkmark when checked */
+.main input:checked~.geekmark:after {
+    display: block;
+}
+
+/* Styling the checkmark using webkit */
+/* Rotated the rectangle by 45 degree and
+        showing only two border to make it look
+        like a tickmark */
+.main .geekmark:after {
+    left: 4px;
+    bottom: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.form-field input:focus {
+    outline: none;
+}
+
+.form-field.error input {
+    border-color: var(--error-color);
+}
+
+.form-field.success input {
+    border-color: var(--success-color);
+}
+
+
+.form-field small {
+    color: var(--error-color);
+}
+
+
+
+.btn {
+    width: 100%;
+    padding: 3%;
+    background: #007bff;
+    border-bottom: 2px solid #007bff;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background: #0069d9;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+small {
+    display: block;
+}
+
+#next {
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    background-color: blue;
+    border-radius: 5px;
+    margin: 0 auto;
+    display: block;
+}
+
+#next:hover {
+    color: #000;
+    background-color: yellow;
+}
+
+#next:active {
+    background-color: hotpink;
+}
+
+#recommendation {
+    margin: 50px 10px 150px;
+}
+
+#recommendedsite {
+    display: inline-block;
+    padding: 5px;
+    margin-left: 10px;
+    background-color: rgb(108, 108, 155);
+    color: black;
+    border-radius: 10px;
+}
+
+#recommendedsite:hover {
+    background-color: rgb(160, 175, 121);
+}
+
+#recommendedsite:active {
+    background-color: rgb(80, 200, 126);
+}
+
+input {
+    outline: none;
+}
